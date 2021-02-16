@@ -15,7 +15,8 @@ struct Stock: Identifiable {
     var isFavourite: Bool
     var currentPrice: Float
     var dayDelta: Float
-    var logoName: String
+    
+    private var logoName: String
     
     var logo: Image {
         Image(logoName)
