@@ -11,6 +11,8 @@
 		E9118FB625DC18F80079169A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FB525DC18F80079169A /* ContentView.swift */; };
 		E9118FB825DC18FA0079169A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9118FB725DC18FA0079169A /* Assets.xcassets */; };
 		E9118FBB25DC18FA0079169A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9118FBA25DC18FA0079169A /* Preview Assets.xcassets */; };
+		E9118FC425DC1BBF0079169A /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FC325DC1BBF0079169A /* AppModel.swift */; };
+		E9118FC725DC1F580079169A /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FC625DC1F580079169A /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		E9118FB725DC18FA0079169A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9118FBA25DC18FA0079169A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9118FBC25DC18FA0079169A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9118FC325DC1BBF0079169A /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		E9118FC625DC1F580079169A /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				E9118FB325DC18F80079169A /* StocksApp.swift */,
 				E9118FB525DC18F80079169A /* ContentView.swift */,
+				E9118FC625DC1F580079169A /* RowView.swift */,
+				E9118FC325DC1BBF0079169A /* AppModel.swift */,
 				E9118FB725DC18FA0079169A /* Assets.xcassets */,
 				E9118FBC25DC18FA0079169A /* Info.plist */,
 				E9118FB925DC18FA0079169A /* Preview Content */,
@@ -139,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9118FB625DC18F80079169A /* ContentView.swift in Sources */,
+				E9118FC425DC1BBF0079169A /* AppModel.swift in Sources */,
 				E9118FB425DC18F80079169A /* StocksApp.swift in Sources */,
+				E9118FC725DC1F580079169A /* RowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
