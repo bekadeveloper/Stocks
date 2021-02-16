@@ -10,7 +10,7 @@ import SwiftUI
 struct RowView: View {
     var body: some View {
         HStack {
-            Image("AMZN.png").cornerRadius(10)
+            Image("AMZN.png")
         }
     }
 }
