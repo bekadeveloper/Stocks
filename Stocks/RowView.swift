@@ -8,25 +8,26 @@
 import SwiftUI
 
 struct RowView: View {
+    var stock: Stock
+    
     var body: some View {
         HStack {
-            
-            Image("YNDX")
+            stock.icon
                 .cornerRadius(12)
                 .padding(8)
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text("YNDX")
+                    Text(stock.ticker)
                         .font(.headline)
                         .fontWeight(.bold)
                     Label("", systemImage: "star.fill")
-                        .foregroundColor(.yellow)
+                        .foregroundColor(stock.isFavourite ? .yellow : .gray)
                         .frame(width: 16, height: 16)
                         .padding(.leading, 6)
                 }
                 
-                Text("Yandex, LLC")
+                Text(stock.companyName)
                     .font(.footnote)
                     .fontWeight(.semibold)
             }
@@ -34,7 +35,7 @@ struct RowView: View {
             Spacer()
             
             VStack(alignment: .trailing) {
-                Text("$72.15")
+                Text("$\(stock.dayDeltaCash)")
                     .font(.headline)
                     .fontWeight(.bold)
                 Text("+$0.12 (1,15%)")
@@ -42,18 +43,17 @@ struct RowView: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.green)
             }
-            .padding(8)
+            .padding(9)
         }
         .background(Color(red: 0.938, green: 0.958, blue: 0.97))
         .foregroundColor(.black)
         .cornerRadius(16)
-        .padding()
     }
 }
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView()
+        RowView(stock: ModelData().stocks[0])
             .preferredColorScheme(.dark)
     }
 }

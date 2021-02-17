@@ -13,6 +13,9 @@
 		E9118FBB25DC18FA0079169A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9118FBA25DC18FA0079169A /* Preview Assets.xcassets */; };
 		E9118FC425DC1BBF0079169A /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FC325DC1BBF0079169A /* AppModel.swift */; };
 		E9118FC725DC1F580079169A /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FC625DC1F580079169A /* RowView.swift */; };
+		E9118FCA25DC34A60079169A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FC925DC34A60079169A /* ListView.swift */; };
+		E91D9BCE25DD32CD004DF5F6 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D9BCD25DD32CD004DF5F6 /* ModelData.swift */; };
+		E91D9BD125DD3BC4004DF5F6 /* stockData.json in Resources */ = {isa = PBXBuildFile; fileRef = E91D9BD025DD3BC4004DF5F6 /* stockData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E9118FBC25DC18FA0079169A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9118FC325DC1BBF0079169A /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		E9118FC625DC1F580079169A /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		E9118FC925DC34A60079169A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		E91D9BCD25DD32CD004DF5F6 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		E91D9BD025DD3BC4004DF5F6 /* stockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stockData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +65,12 @@
 				E9118FB325DC18F80079169A /* StocksApp.swift */,
 				E9118FB525DC18F80079169A /* ContentView.swift */,
 				E9118FC625DC1F580079169A /* RowView.swift */,
+				E9118FC925DC34A60079169A /* ListView.swift */,
+				E91D9BCD25DD32CD004DF5F6 /* ModelData.swift */,
 				E9118FC325DC1BBF0079169A /* AppModel.swift */,
 				E9118FB725DC18FA0079169A /* Assets.xcassets */,
 				E9118FBC25DC18FA0079169A /* Info.plist */,
+				E91D9BD025DD3BC4004DF5F6 /* stockData.json */,
 				E9118FB925DC18FA0079169A /* Preview Content */,
 			);
 			path = Stocks;
@@ -133,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9118FBB25DC18FA0079169A /* Preview Assets.xcassets in Resources */,
+				E91D9BD125DD3BC4004DF5F6 /* stockData.json in Resources */,
 				E9118FB825DC18FA0079169A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,8 +156,10 @@
 			files = (
 				E9118FB625DC18F80079169A /* ContentView.swift in Sources */,
 				E9118FC425DC1BBF0079169A /* AppModel.swift in Sources */,
+				E9118FCA25DC34A60079169A /* ListView.swift in Sources */,
 				E9118FB425DC18F80079169A /* StocksApp.swift in Sources */,
 				E9118FC725DC1F580079169A /* RowView.swift in Sources */,
+				E91D9BCE25DD32CD004DF5F6 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,18 @@
 import Foundation
 import SwiftUI
 
-struct Stock: Identifiable {
-    var id: UUID
+struct Stock: Identifiable, Decodable {
+    var id: Int
     var companyName: String
     var ticker: String
     var isFavourite: Bool
     var currentPrice: Float
-    var dayDelta: Float
+    var dayDeltaCash: Double
+    var dayDeltaPercent: Float
     
-    private var logoName: String
+    private var iconName: String
     
-    var logo: Image {
-        Image(logoName)
+    var icon: Image {
+        Image(iconName)
     }
 }
