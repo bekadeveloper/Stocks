@@ -63,11 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				E9118FB325DC18F80079169A /* StocksApp.swift */,
-				E9118FB525DC18F80079169A /* ContentView.swift */,
-				E9118FC625DC1F580079169A /* RowView.swift */,
-				E9118FC925DC34A60079169A /* ListView.swift */,
-				E91D9BCD25DD32CD004DF5F6 /* ModelData.swift */,
-				E9118FC325DC1BBF0079169A /* AppModel.swift */,
+				E986FC0B262C652600287EB7 /* View */,
+				E986FC0D262C654100287EB7 /* Model */,
 				E9118FB725DC18FA0079169A /* Assets.xcassets */,
 				E9118FBC25DC18FA0079169A /* Info.plist */,
 				E91D9BD025DD3BC4004DF5F6 /* stockData.json */,
@@ -82,6 +79,25 @@
 				E9118FBA25DC18FA0079169A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E986FC0B262C652600287EB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9118FB525DC18F80079169A /* ContentView.swift */,
+				E9118FC925DC34A60079169A /* ListView.swift */,
+				E9118FC625DC1F580079169A /* RowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E986FC0D262C654100287EB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E91D9BCD25DD32CD004DF5F6 /* ModelData.swift */,
+				E9118FC325DC1BBF0079169A /* AppModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

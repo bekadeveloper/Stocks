@@ -12,7 +12,7 @@ struct RowView: View {
     
     var body: some View {
         HStack {
-            stock.icon
+            Image(stock.iconName)
                 .cornerRadius(12)
                 .padding(8)
             
