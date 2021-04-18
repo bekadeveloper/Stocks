@@ -1,15 +1,5 @@
 [
     {
-        "companyName": "Yandex, LLC",
-        "id": 1001,
-        "ticker": "YNDX",
-        "iconName": "yandex",
-        "isFavourite": false,
-        "currentPrice": 72.15,
-        "dayDeltaCash": 0.12,
-        "dayDeltaPercent": 1.15
-    },
-    {
         "companyName": "Apple Inc.",
         "id": 1002,
         "ticker": "AAPL",
