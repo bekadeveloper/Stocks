@@ -1,5 +1,5 @@
 //
-//  AppModel.swift
+//  StockModel.swift
 //  Stocks
 //
 //  Created by Begzod Bakhriddinov on 16/02/21.
@@ -21,7 +21,7 @@ struct Stock: Identifiable, Decodable {
 
 class Api {
     func getStocks(completion: @escaping ([Stock]) -> ()) {
-        guard let url = URL(string: "https://raw.githubusercontent.com/bekadeveloperx/Stocks/main/Stocks/stockData.json") else {
+        guard let url = URL(string: "https://gist.githubusercontent.com/bekadeveloperx/55878e39df3d42aec1f5edbc1f82f3c6/raw/253622d672e984f33ec47994824af9906fa53a21/stocks.json") else {
             return
         }
         

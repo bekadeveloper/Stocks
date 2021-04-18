@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class ModelData: ObservableObject {
+class StockData: ObservableObject {
     @Published var stocks: [Stock] = load("stockData.json")
 }
 

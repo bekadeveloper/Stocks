@@ -53,7 +53,7 @@ struct RowView: View {
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView(stock: ModelData().stocks[0])
+        RowView(stock: StockData().stocks[0])
             .preferredColorScheme(.dark)
     }
 }
