@@ -14,7 +14,7 @@
 		E9118FC425DC1BBF0079169A /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FC325DC1BBF0079169A /* StockModel.swift */; };
 		E9118FC725DC1F580079169A /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FC625DC1F580079169A /* RowView.swift */; };
 		E9118FCA25DC34A60079169A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FC925DC34A60079169A /* ListView.swift */; };
-		E91D9BCE25DD32CD004DF5F6 /* StockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D9BCD25DD32CD004DF5F6 /* StockData.swift */; };
+		E91D9BCE25DD32CD004DF5F6 /* ApiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D9BCD25DD32CD004DF5F6 /* ApiClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		E9118FC325DC1BBF0079169A /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
 		E9118FC625DC1F580079169A /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		E9118FC925DC34A60079169A /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		E91D9BCD25DD32CD004DF5F6 /* StockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockData.swift; sourceTree = "<group>"; };
+		E91D9BCD25DD32CD004DF5F6 /* ApiClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 		E986FC0D262C654100287EB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E91D9BCD25DD32CD004DF5F6 /* StockData.swift */,
+				E91D9BCD25DD32CD004DF5F6 /* ApiClass.swift */,
 				E9118FC325DC1BBF0079169A /* StockModel.swift */,
 			);
 			path = Model;
@@ -171,7 +171,7 @@
 				E9118FCA25DC34A60079169A /* ListView.swift in Sources */,
 				E9118FB425DC18F80079169A /* StocksApp.swift in Sources */,
 				E9118FC725DC1F580079169A /* RowView.swift in Sources */,
-				E91D9BCE25DD32CD004DF5F6 /* StockData.swift in Sources */,
+				E91D9BCE25DD32CD004DF5F6 /* ApiClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

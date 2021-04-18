@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var stocks: [Stock] = []
+    var stockData = StockData()
     
     var body: some View {
-        ListView(stocks: $stocks)
-            .onAppear {
-                Api().getStocks { (stocks) in
-                    self.stocks = stocks
-                }
-            }
+        ListView()
+            .environmentObject(stockData)
     }
 }
 

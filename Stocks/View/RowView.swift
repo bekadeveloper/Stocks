@@ -51,9 +51,9 @@ struct RowView: View {
     }
 }
 
-struct RowView_Previews: PreviewProvider {
-    static var previews: some View {
-        RowView(stock: StockData().stocks[0])
-            .preferredColorScheme(.dark)
-    }
-}
+//struct RowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RowView(stock: StockData().stocks[0])
+//            .preferredColorScheme(.dark)
+//    }
+//}

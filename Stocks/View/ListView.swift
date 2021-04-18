@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ListView: View {
-    @Binding var stocks: [Stock]
+    @EnvironmentObject var stockData: StockData
     
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(stocks) { stock in
+                ForEach(stockData.stocks) { stock in
                     RowView(stock: stock)
                         .padding(.top, 1)
                         .padding(.bottom, 1)
@@ -23,5 +23,16 @@ struct ListView: View {
             }
             .navigationTitle("Stocks")
         }
+        .onAppear {
+            stockData.getStocks()
+        }
+    }
+}
+
+struct ListView_Previews: PreviewProvider {
+    static var previews: some View {
+        ListView()
+            .preferredColorScheme(.light)
+            .environmentObject(StockData())
     }
 }
