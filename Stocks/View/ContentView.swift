@@ -13,9 +13,6 @@ struct ContentView: View {
     var body: some View {
         ListView()
             .environmentObject(stockData)
-            .onAppear {
-                stockData.getStocks()
-            }
     }
 }
 

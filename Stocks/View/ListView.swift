@@ -13,15 +13,20 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(stockData.stocks) { stock in
-                    RowView(stock: stock)
-                        .padding(.top, 1)
-                        .padding(.bottom, 1)
-                        .padding(.trailing, 10)
-                        .padding(.leading, 10)
+                VStack {
+                    ForEach(stockData.stocks) { stock in
+                        RowView(stock: stock)
+                            .padding(.top, 1)
+                            .padding(.bottom, 1)
+                            .padding(.trailing, 10)
+                            .padding(.leading, 10)
+                    }
                 }
             }
             .navigationTitle("Stocks")
+        }
+        .onAppear {
+            stockData.getStocks()
         }
     }
 }

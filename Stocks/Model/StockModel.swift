@@ -18,20 +18,32 @@ struct Stock: Identifiable, Decodable {
     var close: String
     var change: String
     var percent_change: String
+    
 }
 
 struct Stocks: Decodable {
     var aapl: Stock
     var amzn: Stock
-    var bac: Stock
     var msft: Stock
-    var ma: Stock
+    var eth: Stock
     var tsla: Stock
     var googl: Stock
-    var v: Stock
+    var btc: Stock
+    var doge: Stock
     
     var stockArray: [Stock] {
-        Array(arrayLiteral: aapl, amzn, bac, msft, ma, tsla, googl, v)
+        Array(arrayLiteral: aapl, amzn, msft, tsla, googl,eth, btc, doge)
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case eth = "eth/usd"
+        case btc = "btc/usd"
+        case doge = "doge/usd"
+        case aapl
+        case amzn
+        case msft
+        case tsla
+        case googl
     }
 }
 
@@ -40,7 +52,7 @@ class StockData: ObservableObject {
     @Published var stocks: [Stock] = []
     
     private let apiKey = "df101ac502e14139b95c70b5ca1cdd05"
-    private let symbols = "aapl,amzn,bac,msft,ma,tsla,googl,v"
+    private let symbols = "aapl,amzn,msft,eth/usd,tsla,googl,btc/usd,doge/usd"
     
     func getStocks() {
         guard let url = URL(string: "https://api.twelvedata.com/quote?symbol=\(symbols)&apikey=\(apiKey)") else { fatalError("Missing URL") }
