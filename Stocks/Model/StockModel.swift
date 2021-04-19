@@ -8,23 +8,37 @@
 import Foundation
 import SwiftUI
 
+
 struct Stock: Identifiable, Decodable {
-    var id: Int
+    
+    var id: String
     var companyName: String
     var ticker: String
     var isFavourite: Bool
-    var currentPrice: Float
+    var currentPrice: Double
     var dayDeltaCash: Double
-    var dayDeltaPercent: Float
+    var dayDeltaPercent: Double
     var iconName: String
+    
+    
+    var strPrice: String {
+        String(format: "%.2f", currentPrice)
+    }
+    var strCash: String {
+        String(format: "%.2f", dayDeltaCash)
+    }
+    var strPercent: String {
+        String(format: "%.2f", dayDeltaPercent)
+    }
 }
+
 
 class StockData: ObservableObject {
     @Published var stocks: [Stock] = []
     
     
     func getStocks() {
-        guard let url = URL(string: "https://gist.githubusercontent.com/bekadeveloperx/55878e39df3d42aec1f5edbc1f82f3c6/raw/677385864d61df5791a06eb3f7c7146225cfe403/stocks.json") else { fatalError("Missing URL") }
+        guard let url = URL(string: "https://gist.githubusercontent.com/bekadeveloperx/55878e39df3d42aec1f5edbc1f82f3c6/raw/f81e9d4388f5aeae4080f39e5fa8521502052a1f/stocks.json") else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
 

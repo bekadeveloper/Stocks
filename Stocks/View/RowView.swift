@@ -16,15 +16,17 @@ struct RowView: View {
                 .cornerRadius(12)
                 .padding(8)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 1) {
                 HStack {
                     Text(stock.ticker)
                         .font(.headline)
                         .fontWeight(.bold)
-                    Label("", systemImage: "star.fill")
-                        .foregroundColor(stock.isFavourite ? .yellow : .gray)
-                        .frame(width: 16, height: 16)
-                        .padding(.leading, 6)
+                    if stock.isFavourite {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(stock.isFavourite ? .yellow : .gray)
+                            .frame(width: 16, height: 16)
+                            .padding(5)
+                    }
                 }
                 
                 Text(stock.companyName)
@@ -35,10 +37,10 @@ struct RowView: View {
             Spacer()
             
             VStack(alignment: .trailing) {
-                Text("$\(stock.dayDeltaCash)")
+                Text("$\(stock.strPrice)")
                     .font(.headline)
                     .fontWeight(.bold)
-                Text("+$0.12 (1,15%)")
+                Text("+$\(stock.strCash) (\(stock.strPercent)%)")
                     .font(.footnote)
                     .fontWeight(.semibold)
                     .foregroundColor(.green)
@@ -51,9 +53,13 @@ struct RowView: View {
     }
 }
 
-//struct RowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RowView(stock: StockData().stocks[0])
-//            .preferredColorScheme(.dark)
-//    }
-//}
+
+
+let sampleStock = Stock(id: UUID().uuidString, companyName: "Mastercard", ticker: "MA", isFavourite: true, currentPrice: 134.52, dayDeltaCash: 456.7, dayDeltaPercent: 12.3, iconName: "mastercard")
+
+struct RowView_Previews: PreviewProvider {
+    static var previews: some View {
+        RowView(stock: sampleStock)
+            .preferredColorScheme(.light)
+    }
+}
