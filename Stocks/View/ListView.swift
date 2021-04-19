@@ -23,9 +23,6 @@ struct ListView: View {
             }
             .navigationTitle("Stocks")
         }
-        .onAppear {
-            stockData.getStocks()
-        }
     }
 }
 

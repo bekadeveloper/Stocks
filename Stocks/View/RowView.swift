@@ -12,24 +12,18 @@ struct RowView: View {
     
     var body: some View {
         HStack {
-            Image(stock.iconName)
+            Image(stock.symbol.lowercased())
                 .cornerRadius(12)
                 .padding(8)
             
             VStack(alignment: .leading, spacing: 1) {
                 HStack {
-                    Text(stock.ticker)
+                    Text(stock.symbol)
                         .font(.headline)
                         .fontWeight(.bold)
-                    if stock.isFavourite {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(stock.isFavourite ? .yellow : .gray)
-                            .frame(width: 16, height: 16)
-                            .padding(5)
-                    }
                 }
                 
-                Text(stock.companyName)
+                Text(stock.name)
                     .font(.footnote)
                     .fontWeight(.semibold)
             }
@@ -37,10 +31,10 @@ struct RowView: View {
             Spacer()
             
             VStack(alignment: .trailing) {
-                Text("$\(stock.strPrice)")
+                Text("$\(stock.close)")
                     .font(.headline)
                     .fontWeight(.bold)
-                Text("+$\(stock.strCash) (\(stock.strPercent)%)")
+                Text("+$\(stock.change) (\(stock.percent_change)%)")
                     .font(.footnote)
                     .fontWeight(.semibold)
                     .foregroundColor(.green)
@@ -55,7 +49,7 @@ struct RowView: View {
 
 
 
-let sampleStock = Stock(id: UUID().uuidString, companyName: "Mastercard", ticker: "MA", isFavourite: true, currentPrice: 134.52, dayDeltaCash: 456.7, dayDeltaPercent: 12.3, iconName: "mastercard")
+let sampleStock = Stock(symbol: "MA", name: "Mastercard", close: "134.52", change: "456.7", percent_change: "12.3")
 
 struct RowView_Previews: PreviewProvider {
     static var previews: some View {
