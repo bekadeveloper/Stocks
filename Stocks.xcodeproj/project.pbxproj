@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E9036C2B26344FF200BA46C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9036C2A26344FF200BA46C5 /* Constants.swift */; };
+		E9036C2F263452A900BA46C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9036C2E263452A900BA46C5 /* Constants.swift */; };
 		E9118FB425DC18F80079169A /* StocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FB325DC18F80079169A /* StocksApp.swift */; };
 		E9118FB625DC18F80079169A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9118FB525DC18F80079169A /* ContentView.swift */; };
 		E9118FB825DC18FA0079169A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9118FB725DC18FA0079169A /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E9036C2A26344FF200BA46C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E9036C2E263452A900BA46C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9118FB025DC18F80079169A /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9118FB325DC18F80079169A /* StocksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksApp.swift; sourceTree = "<group>"; };
 		E9118FB525DC18F80079169A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				E9118FB725DC18FA0079169A /* Assets.xcassets */,
 				E9118FBC25DC18FA0079169A /* Info.plist */,
 				E9118FB925DC18FA0079169A /* Preview Content */,
-				E9036C2A26344FF200BA46C5 /* Constants.swift */,
+				E9036C2E263452A900BA46C5 /* Constants.swift */,
 			);
 			path = Stocks;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 				E9118FC425DC1BBF0079169A /* StockModel.swift in Sources */,
 				E9118FCA25DC34A60079169A /* ListView.swift in Sources */,
 				E9118FB425DC18F80079169A /* StocksApp.swift in Sources */,
-				E9036C2B26344FF200BA46C5 /* Constants.swift in Sources */,
+				E9036C2F263452A900BA46C5 /* Constants.swift in Sources */,
 				E9118FC725DC1F580079169A /* RowView.swift in Sources */,
 				E91D9BCE25DD32CD004DF5F6 /* ApiClass.swift in Sources */,
 			);
