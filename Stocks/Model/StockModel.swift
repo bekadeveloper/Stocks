@@ -51,7 +51,7 @@ struct Stocks: Decodable {
 class StockData: ObservableObject {
     @Published var stocks: [Stock] = []
     
-    private let apiKey = "df101ac502e14139b95c70b5ca1cdd05"
+    private let apiKey = API_KEY
     private let symbols = "aapl,amzn,msft,eth/usd,tsla,googl,btc/usd,doge/usd"
     
     func getStocks() {
