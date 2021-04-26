@@ -18,7 +18,8 @@ struct Stock: Identifiable, Decodable {
     var close: String
     var change: String
     var percent_change: String
-    
+    var exchange: String
+    var currency: String
 }
 
 struct Stocks: Decodable {
@@ -32,18 +33,18 @@ struct Stocks: Decodable {
     var doge: Stock
     
     var stockArray: [Stock] {
-        Array(arrayLiteral: aapl, amzn, msft, tsla, googl,eth, btc, doge)
+        Array(arrayLiteral: aapl, amzn, msft, tsla, googl, eth, btc, doge)
     }
     
     enum CodingKeys: String, CodingKey {
+        case aapl = "aapl"
+        case amzn = "amzn"
+        case msft = "msft"
         case eth = "eth/usd"
+        case tsla = "tsla"
+        case googl = "googl"
         case btc = "btc/usd"
         case doge = "doge/usd"
-        case aapl
-        case amzn
-        case msft
-        case tsla
-        case googl
     }
 }
 
@@ -51,7 +52,7 @@ struct Stocks: Decodable {
 class StockData: ObservableObject {
     @Published var stocks: [Stock] = []
     
-    private let apiKey = API_KEY
+    private let apiKey = API_KEY // ! IN ORDER TO RUN THE APP YOU SHOULD PLACE YOUR OWN API KEY HERE
     private let symbols = "aapl,amzn,msft,eth/usd,tsla,googl,btc/usd,doge/usd"
     
     func getStocks() {

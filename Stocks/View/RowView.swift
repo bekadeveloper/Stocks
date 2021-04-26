@@ -14,10 +14,13 @@ struct RowView: View {
         HStack {
             if stock.symbol == "BTC/USD" {
                 CustomImageView(imageName: "BTC")
+                
             } else if stock.symbol == "ETH/USD" {
                 CustomImageView(imageName: "ETH")
+                
             } else if stock.symbol == "DOGE/USD" {
                 CustomImageView(imageName: "DOGE")
+                
             } else {
                 CustomImageView(imageName: stock.symbol)
             }
@@ -36,32 +39,13 @@ struct RowView: View {
             
             Spacer()
             
-            VStack(alignment: .trailing) {
-                Text("$\(String(format: "%.2f", Float(stock.close)!))")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                Text("\(Float(stock.change)!>0 ?"+":"")$\(stock.change) (\(stock.percent_change)%)")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.green)
-            }
-            .padding(9)
+            CustomTextView(stock: stock)
         }
         .background(Color(red: 0.938, green: 0.958, blue: 0.97))
         .foregroundColor(.black)
-        .cornerRadius(16)
-    }
-}
-
-
-
-var sampleStock = Stock(symbol: "BTC/USD", name: "Bitcoin", close: "134.52000", change: "-4.7000", percent_change: "12.3000")
-
-
-struct RowView_Previews: PreviewProvider {
-    static var previews: some View {
-        RowView(stock: sampleStock)
-            .preferredColorScheme(.light)
+        .cornerRadius(15)
+        .padding(.vertical, 1)
+        .padding(.horizontal, 9)
     }
 }
 
@@ -75,6 +59,49 @@ struct CustomImageView: View {
             .scaledToFit()
             .frame(width: 50, height: 50)
             .cornerRadius(12)
-            .padding(8)
+            .padding(.vertical, 5)
+            .padding(.leading, 5)
     }
 }
+
+
+struct CustomTextView: View {
+    var stock: Stock
+    
+    var close: String {
+        String(format: "%.2f", Float(stock.close)!)
+    }
+    var change: String {
+        String(format: "%.1f", Float(stock.change)!.magnitude)
+    }
+    var percent_change: String {
+        String(format: "%.1f", Float(stock.percent_change)!.magnitude)
+    }
+    
+    var body: some View {
+        VStack(alignment: .trailing) {
+            Text("$\(close)")
+                .font(.headline)
+                .bold()
+            
+            Text("\(Float(stock.change)!>=0 ?"":"-")$\(change) (\(percent_change)%)")
+                .foregroundColor(Float(stock.change)!>=0 ?.green:.red)
+                .font(.footnote)
+                .fontWeight(.semibold)
+        }
+        .padding(10)
+    }
+}
+
+
+
+
+
+struct RowView_Previews: PreviewProvider {
+    static var previews: some View {
+        RowView(stock: sampleStock)
+            .preferredColorScheme(.dark)
+    }
+}
+
+let sampleStock = Stock(symbol: "BTC/USD", name: "Bitcoin", close: "134.52000", change: "+4.7000", percent_change: "12.3000", exchange: "", currency: "")

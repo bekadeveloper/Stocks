@@ -16,10 +16,6 @@ struct ListView: View {
                 VStack {
                     ForEach(stockData.stocks) { stock in
                         RowView(stock: stock)
-                            .padding(.top, 1)
-                            .padding(.bottom, 1)
-                            .padding(.trailing, 10)
-                            .padding(.leading, 10)
                     }
                 }
             }
